@@ -25,7 +25,7 @@ body {
   color: hsl(215, 51%, 70%)
 }
 
-.main-container {
+main {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +33,9 @@ body {
   width: 50vh;
   background: hsl(216, 50%, 16%);
   border-radius: 10px;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 20px;
 }
 
 .image {
@@ -40,25 +43,29 @@ body {
   border-radius: 10px;
 }
 
-.main-img {
+.image .main-img {
   height: 100%;
   width: 100%;
   border-radius: 10px;
 }
 
-.icon-view {
+.image div {
+  display: flex;
+  align-items: center;
   position: absolute;
+  height: 51%;
+  width: 89%;
+  left: 50%;
   top: 147px;
-  left: 165px;
-  height: 255px;
-  width: 290px;
   transform: translate(-50%, -50%);
   background-color:hsl(178, 100%, 50%, 60%);
   border-radius: 10px;
+  opacity: 0;
+}
+
+.icon-view {
   display: flex;
   justify-content: center;
-  align-items: center;
-  opacity: 0;
 }
 
 .icon-view:hover {
@@ -69,12 +76,6 @@ body {
 .icon-view img {
   width: 40px;
   height: 40px;
-}
-
-.content {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 20px;
 }
 
 .text-content {
@@ -90,7 +91,7 @@ body {
   padding: 0 0 20px 0;
 }
 
-div img {
+.espaco div img {
   margin-right: 5px;
 }
 
@@ -98,6 +99,9 @@ div img {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: 40px;
+  align-items: flex-start;
+  border-bottom: 1px solid hsl(215, 51%, 70%, 40%);
 }
 
 .espaco div {
@@ -106,13 +110,6 @@ div img {
 
 .value {
   color: hsl(178, 100%, 50%);
-}
-
-.between {
-  width: 100%;
-  overflow: hidden;
-  color: hsl(215, 32%, 27%);
-  margin-bottom: 10px;
 }
 
 footer p {
@@ -132,6 +129,7 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 10px 0 0 0
 }
 
 .destaque {
